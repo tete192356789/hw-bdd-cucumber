@@ -3,10 +3,7 @@ Rails.application.routes.draw do
 
   root :to => redirect('/movies')
   post '/movies/search_tmdb' => 'movies#search_tmdb', :as => 'search_tmdb'
-  get 'auth/:provider/callback' => 'sessions#create'
-  get 'auth/failure' => 'sessions#failure'
-  get 'auth/twitter', :as => 'login'
-  post 'logout' => 'sessions#destroy'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
