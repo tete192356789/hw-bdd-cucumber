@@ -1,9 +1,17 @@
+
+
 Rails.application.routes.draw do
+
+
+  devise_for :moviegoers , controllers: {
+    sessions: 'moviegoers/sessions',
+    omniauth_callbacks: 'moviegoers/omniauth_callbacks'
+  }
   resources :movies
 
   root :to => redirect('/movies')
   post '/movies/search_tmdb' => 'movies#search_tmdb', :as => 'search_tmdb'
-  
+  #devise_for :moviegoers 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
