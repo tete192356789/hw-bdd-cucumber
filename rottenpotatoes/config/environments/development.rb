@@ -5,7 +5,7 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   ENV['GOOGLE_OAUTH_CLIENT_ID'] = '604430754479-3qq3oeb0egs4iqjhh6gashhvmt561b48.apps.googleusercontent.com'
-  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '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'
+  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = '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'
   config.cache_classes = false
 
   # Do not eager load code on boot.

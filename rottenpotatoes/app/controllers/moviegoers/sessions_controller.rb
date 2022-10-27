@@ -14,12 +14,14 @@ class Moviegoers::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  
+  #def destroy
+   # super
+  #end
   
   def after_sign_out_path_for(_resource_or_scope)
-    new_moviegoer_session_path
+  
+    movies_path
   end
 
   def after_sign_in_path_for(resource_or_scope)

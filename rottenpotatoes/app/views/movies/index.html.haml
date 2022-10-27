@@ -8,9 +8,10 @@
 /<%= link_to "Login", new_moviegoer_session_path %>
 //<%= link_to "Create Account", new_moviegoer_registration_path %>
 //<% end %>
+/= link_to 'Add new movie', new_movie_path
 
 - if current_moviegoer 
-  = image_tag(current_moviegoer.avatar_url,:alt => "profile_icon")
+  =image_tag asset_path(current_moviegoer.avatar_url)
   = "Welcome #{current_moviegoer.email} to RottenPotatoes"
   = link_to 'Logout', destroy_moviegoer_session_path, :method => :delete
   
